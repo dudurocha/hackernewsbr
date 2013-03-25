@@ -1,7 +1,7 @@
 <template name="posts_digest">
     <div class="grid">
       <div class="grid-block">
-        The top 5 posts of each day. |
+        Top 5 posts do dia de ontem |
       {{#if showPreviousDate}}
       <a href="{{previousDateURL}}" class="prev-link">Previous Day</a> | 
       {{/if}}
@@ -17,7 +17,7 @@
           {{> post_item}}
         {{/each}}
       {{else}}
-        <p class="empty-notice">Sorry, nothing for today.</p>
+        <p class="empty-notice">Desculpe, nada hoje.</p>
       {{/if}}
     </div>
 </template>

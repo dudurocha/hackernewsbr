@@ -7,15 +7,15 @@
         <div class="controls"><input id="url" type="text" value="" /></div>
       </div>
       <div class="control-group">
-        <label class="control-label">Title</label>
-        <div class="controls"><input id="title" type="text" value="" /><a href="#" class="get-title-link">Suggest title</a></div>
+        <label class="control-label">Título</label>
+        <div class="controls"><input id="title" type="text" value="" /><a href="#" class="get-title-link">Sugerir Título</a></div>
       </div>
       <div class="control-group">
-        <label class="control-label">Message</label>
+        <label class="control-label">Mensagem</label>
         <div class="controls" id="editor"><textarea id="body" value="" class="input-xlarge"/></div>
       </div>
       <div class="control-group">
-        <label class="control-label">Category</label>
+        <label class="control-label">Categoria</label>
         <div class="controls">
           {{#each categories}}
           <label class="radio inline">
@@ -28,17 +28,17 @@
       {{#if isAdmin}}
         {{#constant}}
         <div class="control-group">
-          <label class="control-label">Sticky?</label>
+          <label class="control-label">Fixo?</label>
           <div class="controls">
             <input type="checkbox" name="sticky" id="sticky" />
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label">Date</label>
+          <label class="control-label">Data</label>
           <div class="controls"><input id="submitted" type="text" value="{{submittedDate}}" /><input id="submitted_hidden" type="hidden" value="{{submitted}}" /></div>
         </div>
         <div class="control-group">
-          <label class="control-label">User</label>
+          <label class="control-label">Usuario</label>
           <div class="controls">
             <select id="postUser">
               {{#each users}}

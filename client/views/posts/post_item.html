@@ -1,7 +1,7 @@
 <template name="post_item">
   <div class="post post-{{rank}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
     <ul class="post-actions">
-      <li class="post-share desktop"><a href="#" class="share-link"><i class="icon-share"></i><span class="action">Share</span></a>
+      <li class="post-share desktop"><a href="#" class="share-link"><i class="icon-share"></i><span class="action">Compartilhe</span></a>
         <div class="share-options hidden">
           {{#constant}}
           <div data-url="{{#if url}}{{url}}{{else}}{{current_domain}}/posts/{{_id}}{{/if}}" data-text="{{headline}}" class="share-replace">
@@ -13,10 +13,10 @@
         <a class="discuss-link go-to-comments" href="/posts/{{_id}}">
           <i class="icon-comment"></i>
           <span class="count">{{comments}}</span>
-          <span class="action">Discuss</span>
+          <span class="action">Discussão</span>
         </a>
       </li>
-      <li class="post-more mobile"><a class="more-link"><i class="icon-share"></i><span class="action">Text </span></a></li>
+      <li class="post-more mobile"><a class="more-link"><i class="icon-share"></i><span class="action">Texto </span></a></li>
     </ul>
     <div class="post-content">
       {{#if showRank}}<span class="post-rank">{{rank}}</span>{{/if}}
@@ -29,7 +29,7 @@
       </div>
       <div class="post-info">
         {{#if sticky}}
-          <span class="post-sticky"><i class="icon-pin"></i><span>Sticky</span></span>
+          <span class="post-sticky"><i class="icon-pin"></i><span>Fixo</span></span>
         {{/if}}
         <h3 class="post-heading">
           {{#if url}}
@@ -39,7 +39,7 @@
           {{/if}}
           {{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}
         </h3>
-        <p class="post-meta"><span class="points">{{votes}} <span class="unit">points </span></span>by  <a class="post-author" href="/users/{{userId}}">{{authorName}}</a> <span class="post-time">{{ago}}</span><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} comments</a></span>
+        <p class="post-meta"><span class="points">{{votes}} <span class="unit">pontos </span></span>by  <a class="post-author" href="/users/{{userId}}">{{authorName}}</a> <span class="post-time">{{ago}}</span><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} comentários</a></span>
           {{#if can_edit}}
             | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
           {{/if}}
