@@ -11,6 +11,7 @@
 	Meteor.headly._options = options || Meteor.headly._options;
     };
     
+    var Fiber = __meteor_bootstrap__.require('fibers');
     __meteor_bootstrap__.app
 	.use(function(req, res, next) {
 	    if (req.headers['user-agent'].indexOf('facebookexternalhit') !== -1) {
