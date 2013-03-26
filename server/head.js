@@ -5,6 +5,7 @@ Meteor.serveHead(function(req) {
   try {
     post = Posts.findOne(postId);
   } catch (e) {
+    return e.toString();
   }
   if (post) {
     return '<meta property="og:title" content="' + post.headline + '" />' +
