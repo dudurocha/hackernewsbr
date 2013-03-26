@@ -11,11 +11,11 @@ Meteor.serveHead(function(req) {
            '<meta property="og:description" content="' + post.body + '" />' +
            '<meta property="og:image" content="' + Meteor.absoluteUrl() + 'img/brasil.png" />' +
            '<meta property="og:site_name" content="Hacker News Brasil" />' + 
-           '<meta property="og:url" content="' + Meteor.absoluteUrl() + req.url + '" />';
+           '<meta property="og:url" content="' + 'http://hackernewsbrasil.com.br'+ req.url + '" />';
   } else {
     return '<meta property="og:title" content="Hacker News Brasil" />' +
            '<meta property="og:image" content="' + Meteor.absoluteUrl() + 'img/brasil.png" />' +
            '<meta property="og:site_name" content="Hacker News Brasil" />'+
-           '<meta property="og:url" content="' + Meteor.absoluteUrl() + req.url + '" />';
+           '<meta property="og:url" content="' + 'http://hackernewsbrasil.com.br' + req.url + '" />';
   }
 });
