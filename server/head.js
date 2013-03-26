@@ -1,7 +1,11 @@
 Meteor.headly.config({tagsForRequest: function(req) {
   var urlSplitted = req.url.split('/');
   var postId = urlSplitted[urlSplitted.length - 1];
-  var post = Posts.findOne(postId);
+  var post = null;
+  try {
+    post = Posts.findOne(postId);
+  } catch (e) {
+  }
   if (post) {
     return '<meta property="og:title" content="' + post.headline + '" />' +
            '<meta property="og:description" content="' + post.body + '" />' +
