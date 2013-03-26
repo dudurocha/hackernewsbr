@@ -1,4 +1,4 @@
-Meteor.headly.config({tagsForRequest: function(req) {
+Meteor.serveHead(function(req) {
   var urlSplitted = req.url.split('/');
   var postId = urlSplitted[urlSplitted.length - 1];
   var post = null;
@@ -16,4 +16,4 @@ Meteor.headly.config({tagsForRequest: function(req) {
            '<meta property="og:image" content="/public/img/brasil.png" />' +
            '<meta property="og:site_name" content="Hacker News Brasil" />';
   }
-}});
+});
