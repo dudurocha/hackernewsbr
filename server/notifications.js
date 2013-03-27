@@ -1,5 +1,5 @@
 getUnsubscribeLink = function(user){
-  return Meteor.absoluteUrl()+'unsubscribe/'+user.email_hash;
+  return 'http://hackernewsbrasil.com.br' +'unsubscribe/'+user.email_hash;
 };
 
 Meteor.methods({
