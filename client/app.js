@@ -1,4 +1,5 @@
 Session.set('initialLoad', true);
+moment.lang('pt-br');
 
 l=function(s){
   console.log(s);

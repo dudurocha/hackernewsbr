@@ -2,6 +2,7 @@
 
 Template.user_profile.user = function(){
 	if(userId=Session.get('selectedUserId')){
+		console.log(Meteor.users.findOne(userId));
 		return Meteor.users.findOne(userId);
 	}
 }
@@ -13,7 +14,11 @@ Template.user_profile.avatarUrl = function(){
 	});
 }
 
-Template.user_profile.createdAtFormatted = Template.user_item.createdAtFormatted;
+Template.user_profile.createdAtFormatted = function() {
+
+		return this.createdAt ? moment(this.createdAt).fromNow() : '–';
+	
+}
 
 Template.user_profile.isCurrentUser = function(){
 	return Meteor.user() && (Session.get('selectedUserId') === Meteor.user()._id);
