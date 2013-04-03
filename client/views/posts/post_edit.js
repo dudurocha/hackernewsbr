@@ -11,7 +11,7 @@ Template.post_edit.helpers({
   },
   created: function(){
     var post= Posts.findOne(Session.get('selectedPostId'));
-    return moment(post.createdAt).format("MMMM Do, h:mm:ss a");
+    return moment(post.createdAt).format("MMMM D, h:mm:ss a");
   },
   categories: function(){
     var post = this;
